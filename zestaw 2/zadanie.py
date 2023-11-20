@@ -10,9 +10,9 @@ while x < len(string):
         evenN = evenN +1
     x = x+1
 ascii = []
-print(list)
 for letter in list:
     ascii.append((ord(letter)))
 ascii.sort()
+print(list)    
 print(ascii)
 print(ascii[4])
