@@ -1,11 +1,10 @@
 import random
-max_items = 15
+max_elements_dict = 15
 max_elements_list = 10
 
-test = {'abc':[1,2,3,4,5], 'cdf':[1,4,54]}
-#print(test['abc'])
 disctionary = {}
-for i in range(0, random.randrange(2, max_items)):
+#lsowanie długości słownika orazu kluczy i wartości
+for i in range(0, random.randrange(2, max_elements_dict)):
     tab = []
     key = ''
     for i in range(0, random.randrange(2,max_elements_list)):
@@ -18,6 +17,7 @@ print('-------------------------------------------------------------------------
 print(disctionary)
 print('---------------------------------------------------------------------------------------')
 disctionary_2 = {}
+#dodawanie warttości liczb w listach
 for x in disctionary:
     sum = 0
     content = disctionary[x]
