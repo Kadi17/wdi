@@ -1,7 +1,9 @@
 array = [0, 4, 6, 8, 4, -20, 100, -500]
-class SequenceCounter():    
+class SequenceCounter:    
+    def __init__(self, arr):
+        self.arr = arr
 
-    def count_sequences(self, arr):
+    def count_sequences(self):
         def is_arithmetic(a, b, c):
             return 2 * b == a + c
 
@@ -11,11 +13,11 @@ class SequenceCounter():
         arithmetic_count = 0
         geometric_count = 0
 
-        for i in range(len(arr) - 2):
-            if is_arithmetic(arr[i], arr[i + 1], arr[i + 2]):
+        for i in range(len(self.arr) - 2):
+            if is_arithmetic(self.arr[i], self.arr[i + 1], self.arr[i + 2]):
                 arithmetic_count += 1
 
-            if is_geometric(arr[i], arr[i + 1], arr[i + 2]):
+            if is_geometric(self.arr[i], self.arr[i + 1], self.arr[i + 2]):
                 geometric_count += 1
 
         if arithmetic_count > geometric_count:
@@ -26,6 +28,7 @@ class SequenceCounter():
             return 0
 
 
-counter = SequenceCounter()
-result = counter.count_sequences(array)
+
+counter = SequenceCounter(array)
+result = counter.count_sequences()
 print(result)
