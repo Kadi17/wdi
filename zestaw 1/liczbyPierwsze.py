@@ -10,5 +10,3 @@ else:
         print('jest liczbą pierwszą')
     else:
         print('nie jest')
-
-
